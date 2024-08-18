@@ -4,7 +4,7 @@ a= PyPDF2.PdfReader('c.pdf')
 
 
 #print(a.is_encrypted)
-#print(len(a.pages))
+print(len(a.pages))
 
 print(a.metadata)
 print(a.page_layout)
