@@ -2,7 +2,7 @@ import PyPDF2
 import tkinter as tk
 from tkinter import scrolledtext
 
-def show_text_popup(text):
+def pdf_viewer(text):
 
     window = tk.Tk()
     window.title("Extracted Text")
@@ -26,10 +26,9 @@ for i in range(0,len(a.pages)):
 
 with open('text.txt','w',encoding='utf-8') as file:
     file.write(str)
-    
-       
+          
 
 with open('text.txt', 'r', encoding='utf-8') as file:
     extracted_text = file.read()
 
-show_text_popup(extracted_text)
+pdf_viewer(extracted_text)
