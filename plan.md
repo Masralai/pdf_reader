@@ -1,1 +1,0 @@
-optional - filter the contents of pdf through an array that only accepts text charcters and excludes images

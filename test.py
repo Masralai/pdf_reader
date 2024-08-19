@@ -1,7 +1,7 @@
 import PyPDF2
 
 
-a= PyPDF2.PdfReader('c.pdf')
+a= PyPDF2.PdfReader('fileisro.pdf')
 
 
 #print(a.is_encrypted)

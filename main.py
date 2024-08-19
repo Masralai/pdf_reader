@@ -6,9 +6,9 @@ def pdf_viewer(text):
 
     window = tk.Tk()
     window.title("Extracted Text")
+    
 
-
-    text_widget = scrolledtext.ScrolledText(window, wrap=tk.WORD, width=80, height=20)
+    text_widget = scrolledtext.ScrolledText(window, wrap=tk.WORD, width=80, height=30,fg="darkblue",bg="lightyellow",font="Consolas")
     text_widget.pack(expand=True, fill=tk.BOTH)
 
     text_widget.insert(tk.END, text)
@@ -18,14 +18,14 @@ def pdf_viewer(text):
     window.mainloop()
 
 
-a= PyPDF2.PdfReader('c.pdf')
+a= PyPDF2.PdfReader('fileisro.pdf')
 
-str=""
+string=""
 for i in range(0,len(a.pages)):
-    str+=a.pages[i].extract_text()
+    string+=a.pages[i].extract_text()
 
 with open('text.txt','w',encoding='utf-8') as file:
-    file.write(str)
+    file.write(string)
           
 
 with open('text.txt', 'r', encoding='utf-8') as file:
